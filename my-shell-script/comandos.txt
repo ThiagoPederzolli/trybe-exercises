@@ -1,0 +1,7 @@
+cd 
+ls
+cd Documents
+ls
+cd unix_tests
+ls
+pwd
