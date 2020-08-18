@@ -1,16 +1,16 @@
 #!/bin/bash
 
-for FILE in $@
+for FILE in $@ #permite que o usuário adicione quantos arquivos ou diretórios desejar como parâmetros para função.
 do
-    if [ -d $FILE ]
-    then
-        echo "$FILE é um diretório"
+    if [ -d $FILE ] #verifica se é um diretório.
+    then #ação que deve ser retornada caso seja um diretório.
+        echo "$FILE é um diretório" 
         ls -l $FILE
-    elif [ -f $FILE ]
-    then
+    elif [ -f $FILE ] #verifica se é um arquivo.
+    then #ação que deve ser retornada caso seja um arquivo.
         echo "$FILE é um arquivo regular"
         ls -l $FILE
-    else
+    else #se não for um arquivo ou diretório, retornar isso.
         echo "é um outro tipo de arquivo"
         ls -l $FILE
     fi
