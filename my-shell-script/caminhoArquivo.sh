@@ -1,5 +1,7 @@
 #!/bin/bash
-#Eu sou Tyber e...
+
+#Eu sou Tyber e vou ter muito sucesso na programação!
+
 
 for FILE in $@ #permite que o usuário adicione quantos arquivos ou diretórios desejar como parâmetros para função.
 do
