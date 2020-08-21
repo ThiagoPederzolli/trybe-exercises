@@ -238,6 +238,9 @@ aside#lateral h2{
     padding: 5px;
 
 }
+video#filme{
+    width: 340px;
+}
 
 footer#rodape {
     clear: both;
