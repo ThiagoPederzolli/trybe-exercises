@@ -1,0 +1,1 @@
+let firstName = "John", lastName = "Doe", age = 35;
