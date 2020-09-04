@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <h2 id="page-title">Título</h2>
+    <p id="paragraph" class='paragrafo'>Dê uma cor para este parágrafo!</p>
+    <h4 id="subtitle">Subtítulo</h4>
+    <p id="second-paragraph" class='paragrafo'>Segundo parágrafo!</p>
+
+    <script>
+      let paragraph = document.querySelector("#paragraph");
+      paragraph.style.color = "red";
+      let title = document.querySelector("#page-title");
+      title.innerText = "Trilogia Senhor Dos Anéis";
+      let secondParagraph = document.querySelector("#second-paragraph");
+      secondParagraph.innerText = "A melhor trilogia da história. Uma obra prima de genialidade e criatividade.";
+      let subtitle = document.querySelector("#subtitle");
+      subtitle.innerText = 'Assista!';
+      let paragrafo = document.querySelectorAll('.paragrafo')[0];
+      paragrafo.style.color = 'blue';
+      let subtitulo = document.querySelectorAll('h4')[0];
+      subtitulo.innerText = 'Você precisa ver os filmes';
+    </script>
+  </body>
+</html>
