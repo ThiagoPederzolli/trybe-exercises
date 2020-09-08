@@ -35,7 +35,20 @@
     let terceiro = document.querySelector('#elementoOndeVoceEsta').nextElementSibling;
     console.log(terceiro);
     let terceiroDoPai = document.querySelector('#pai').lastChild.previousElementSibling.previousElementSibling;
-    console.log(terceiroDoPai)
+    console.log(terceiroDoPai);
+    let primeiroIrmao = document.createElement('div');
+    primeiroIrmao.innerText = 'div criada';
+    let divPai = document.querySelector('#pai');
+    divPai.appendChild(primeiroIrmao);
+    let divFilhaDeOndeEstou = document.createElement('div');
+    divFilhaDeOndeEstou.innerText = 'Div filha de onde estou';
+    let ondeEstou = document.querySelector('#elementoOndeVoceEsta');
+    ondeEstou.appendChild(divFilhaDeOndeEstou);
+    let filhoDoFilhoDoFilho = document.createElement('div');
+    filhoDoFilhoDoFilho.innerText = 'Bis neto';
+    let filhoDoFilho = document.querySelector('#primeiroFilhoDoFilho');
+    filhoDoFilho.appendChild(filhoDoFilhoDoFilho);
+
   </script>
 </body>
 </html>
