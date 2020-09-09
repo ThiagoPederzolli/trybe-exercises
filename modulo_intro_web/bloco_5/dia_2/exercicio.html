@@ -130,6 +130,18 @@
 
       let changeBG = document.querySelector('.center-content').parentNode;
       changeBG.style.backgroundColor = 'green';
+
+
+      let listagem = document.querySelector('ul');
+      let remover = document.querySelectorAll('li');
+
+      for (let i = 0; i < remover.length; i += 1) {
+        let removido = remover[i];
+
+        if (removido.innerText.includes('nove') || removido.innerText.includes('dez')) {
+          listagem.removeChild(removido);
+        }
+      }
       
     </script>
   </body>
