@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<body>
+  <div id="paiDoPai">
+    <div id="pai">
+      <div id="primeiroFilho"></div>
+      <div id="elementoOndeVoceEsta">
+        <div id="primeiroFilhoDoFilho"></div>
+        <div id="segundoEUltimoFilhoDoFilho"></div>
+      </div>
+      Atenção!
+      <div id="terceiroFilho"></div>
+      <div id="quartoEUltimoFilho"></div>
+    </div>
+  </div>
+  
+  <script>
+    let pai = document.querySelector('#elementoOndeVoceEsta').parentNode;
+    pai.style.color = 'rgb(233, 47, 227)';
+    console.log(pai);
+    let filho = document.querySelector('#elementoOndeVoceEsta').firstChild.nextElementSibling;
+    console.log(filho);
+    // filho.innerText = 'Exercício dia 2 bloco 5 Introdução ao Desenvolvimento Web';
+    let primeiroFilho = document.querySelector('#pai').firstChild.nextElementSibling;
+    // primeiroFilho.innerText = 'imprime na tela';
+    console.log(primeiroFilho);
+    let texto = document.querySelector('#elementoOndeVoceEsta').nextSibling;
+    // texto.style.color = 'blue';
+    console.log(texto);    
+    let terceiro = document.querySelector('#elementoOndeVoceEsta').nextElementSibling;
+    console.log(terceiro);
+    let terceiroDoPai = document.querySelector('#pai').lastChild.previousElementSibling.previousElementSibling;
+    console.log(terceiroDoPai)
+  </script>
+</body>
+</html>

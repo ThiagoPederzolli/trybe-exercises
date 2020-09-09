@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>Exercício 5.2</title>
+    <style>
+      div {
+        border-color: black;
+        border-style: solid;
+      }
+
+      .title {
+        text-align: center;
+      }
+
+      .main-content {
+        background-color: yellow;
+      }
+
+      .main-content .center-content {
+        background-color: red;
+        width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .main-content .center-content p {
+        font-style: italic;
+      }
+
+      .main-content .left-content {
+        background-color: green;
+        width: 60%;
+        margin-left: 0;
+        margin-right: auto;
+      }
+
+      .main-content .left-content .small-image {
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        border-radius: 100%;
+      }
+
+      .main-content .right-content {
+        background-color: blue;
+        width: 60%;
+        margin-left: auto;
+        margin-right: 0;
+      }
+
+      .main-content .description {
+        text-align: center;
+      }
+    </style>
+  </head>
+  <body>    
+    <script>
+      // COLOQUE SEU CÓDIGO AQUI
+      let tag1 = document.createElement('h1');
+      tag1.innerText = 'Exercício 5.2 - javaScript DOM';
+      tag1.className = 'title';
+      document.body.appendChild(tag1);
+
+      let div1 = document.createElement('div');
+      div1.className = 'main-content';
+      document.body.appendChild(div1);
+
+      let div1Filha = document.createElement('div');
+      div1Filha.className = 'center-content';
+      div1.appendChild(div1Filha);
+
+
+      let p1 = document.createElement('p');
+      p1.innerText = 'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Impedit natus obcaecati eum officiis quo praesentium eaque, tempora unde rerum repudiandae? Repellat animi libero ex consequuntur recusandae. Sunt porro deserunt quam.';
+      div1Filha.appendChild(p1);
+
+      let div1FilhaEsquerda = document.createElement('div');
+      div1FilhaEsquerda.className = 'left-content';
+      div1.appendChild(div1FilhaEsquerda);
+
+      let div1FilhaDireita = document.createElement('div');
+      div1FilhaDireita.className = 'right-content';
+      div1FilhaDireita.style.marginRight = 'auto';
+      div1.appendChild(div1FilhaDireita);
+
+      let imagem = document.createElement('img');
+      imagem.src = 'https://picsum.photos/200';
+      imagem.className = 'small-image';
+      div1FilhaEsquerda.appendChild(imagem);
+
+      let lista = document.createElement('ul');
+      div1FilhaDireita.appendChild(lista);
+      let numeros = [
+        'um',
+        'dois',
+        'três',
+        'quatro',
+        'cinco',
+        'seis',
+        'sete',
+        'oito',
+        'nove',
+        'dez'
+      ];
+      let listaDeNumeros = document.querySelector('ul');
+      for (let i = 0; i < numeros.length; i += 1) {
+        let numero = numeros[i];
+
+        let numeroDaListaDeNumeros = document.createElement('li');
+        numeroDaListaDeNumeros.innerText = numero;
+
+        listaDeNumeros.appendChild(numeroDaListaDeNumeros);
+      }
+      
+      let h31 = document.createElement('h3');
+      let h32 = document.createElement('h3');
+      let h33 = document.createElement('h3');
+      div1.appendChild(h31);
+      div1.appendChild(h32);
+      div1.appendChild(h33);
+
+      let allh3 = document.querySelectorAll('h3');
+      for (let i = 0; i < allh3.length; i += 1) {
+        allh3[i].className = 'description';
+      }
+
+      div1.removeChild(div1FilhaEsquerda);
+
+      let changeBG = document.querySelector('.center-content').parentNode;
+      changeBG.style.backgroundColor = 'green';
+
+
+      let listagem = document.querySelector('ul');
+      let remover = document.querySelectorAll('li');
+
+      for (let i = 0; i < remover.length; i += 1) {
+        let removido = remover[i];
+
+        if (removido.innerText.includes('nove') || removido.innerText.includes('dez')) {
+          listagem.removeChild(removido);
+        }
+      }
+      
+    </script>
+  </body>
+</html>
