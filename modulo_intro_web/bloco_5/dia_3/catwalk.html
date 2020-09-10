@@ -11,13 +11,21 @@
   <script>
     let imgSrc = document.querySelector('img').src;
     let img = document.querySelector('img');
+    let goingLeft;
     img.style.left = '0px';
     window.onload = catWalk;
     function catWalk() {
-        img.style.left = (parseInt(img.style.left) + 10) + 'px';
+        // img.style.left = (parseInt(img.style.left) + 10) + 'px';
       console.log('walk')
       let left = parseInt(img.style.left);
-      if(left > (window.innerWidth - img.width)){
+      if (goingLeft && (left > (window.innerWidth - img.width))) {
+        goingLeft = false;
+      } else if (!goingLeft && (left <= 0)) {
+        goingLeft = true;
+      }
+      if(goingLeft) {
+        img.style.left = (parseInt(img.style.left) + 10) + 'px';
+      } else {
         img.style.left = (parseInt(img.style.left) - 10) + 'px';
       }
     }

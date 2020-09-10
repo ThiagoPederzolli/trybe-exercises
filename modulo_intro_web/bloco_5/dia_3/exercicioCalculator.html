@@ -41,11 +41,15 @@
     let squareButton = document.querySelector('#square-button');
     let squareInput = document.querySelector('#square-input');
     let solution = document.querySelector('#solution');
-    squareButton.addEventListener('click', squareNumber)
+    squareButton.addEventListener('click', squareNumber);
+    squareInput.addEventListener('keypress', squareNumber)
     function squareNumber(number) {
       let areaNumber = number * number;
+      if (event.key == 'Enter' || event.type == 'click') {
       let squaredNumber = squareInput.value * squareInput.value;
-      solution.innerText = 'The result of squaring the number ' + squareInput.value + ' is ' + squaredNumber;
+        solution.innerText = 'The result of squaring the number ' + squareInput.value + ' is ' + squaredNumber;
+      }
+      
       return areaNumber;
     }
 
@@ -82,14 +86,14 @@
 
     // areaOfCircle(2);
 
-    function doCrazyStuff(num) {
-        var half    = halfOf(num);
-        var squared = squareNumber(half);
-        var area    = areaOfCircle(squared);
-        var result  = percentOf(squared, area);
-    }
+//     function doCrazyStuff(num) {
+//         var half    = halfOf(num);
+//         var squared = squareNumber(half);
+//         var area    = areaOfCircle(squared);
+//         var result  = percentOf(squared, area);
+//     }
 
-doCrazyStuff(5);
+// doCrazyStuff(5);
   </script>
 </body>
 </html>
