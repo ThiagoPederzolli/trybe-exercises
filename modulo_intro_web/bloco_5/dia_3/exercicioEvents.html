@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+ <head>
+  <meta charset="utf-8" />
+  <title></title>
+ </head>
+ <body>
+ 
+ <h1>Mad Libs</h1>
+ 
+ <ul>
+  <li>Noun: <input type="text" id="noun">
+  <li>Adjective: <input type="text" id="adjective">
+  <li>Someone's Name: <input type="text" id="person">
+ </ul>
+ 
+ <button id="lib-button">Lib it!</button>
+  
+ <div id="story"></div>
+  <script>
+    let botao = document.querySelector('#lib-button');
+    let noun = document.querySelector('#noun');
+    let adjective = document.querySelector('#adjective');
+    let name = document.querySelector('#person');
+    let story = document.querySelector('#story');
+    function makeMadLib() {
+      story.innerText = `${name.value} really likes ${adjective.value} ${noun.value}`
+    }
+    
+    botao.addEventListener('click', makeMadLib);
+  </script>
+ </body>
+</html>

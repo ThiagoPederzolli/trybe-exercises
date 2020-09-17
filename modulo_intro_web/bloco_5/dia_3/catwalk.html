@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+ <head>
+  <meta charset="utf-8" />
+  <title>Cat Walk</title>
+ </head>
+ <body>
+  
+  <img style="position:absolute;" src="https://media1.tenor.com/images/d7d3fbfbee85b01264854bfac2ffcdaa/tenor.gif?itemid=5638695">
+  
+  <script>
+    let imgSrc = document.querySelector('img').src;
+    let img = document.querySelector('img');
+    let goingLeft;
+    img.style.left = '0px';
+    window.onload = catWalk;
+    function catWalk() {
+        // img.style.left = (parseInt(img.style.left) + 10) + 'px';
+      console.log('walk')
+      let left = parseInt(img.style.left);
+      if (goingLeft && (left > (window.innerWidth - img.width))) {
+        goingLeft = false;
+      } else if (!goingLeft && (left <= 0)) {
+        goingLeft = true;
+      }
+      if(goingLeft) {
+        img.style.left = (parseInt(img.style.left) + 10) + 'px';
+      } else {
+        img.style.left = (parseInt(img.style.left) - 10) + 'px';
+      }
+    }
+    setInterval(catWalk, 50)
+  </script>
+ </body>
+</html>

@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Exercício - Parte 2</title>
+    <!-- Seu código JavaScript pode vir aqui -->
+    <!-- Seu código JavaScript pode vir aqui -->
+    <!-- Seu código JavaScript pode vir aqui -->
+    <style>
+      img {
+        width: 400px;
+        height: 400px;
+      }
+    </style>
+  </head>
+  <body>
+    <div>
+      <h1>Exercício - Parte 2</h1>
+      <hr />
+      <h2>Tarefa 1</h2>
+      <p>
+        Adicione um botão HTML na área indicada abaixo. Usando um
+        <strong>EventListener</strong> adicione um evento ao botão, onde ao ser
+        clicado um alerta contendo a mensagem "Você clicou no botão" deverá ser
+        exibido.
+      </p>
+      <div class="tarefa1">Adicione o botão aqui!</div>
+      <script>
+        let tarefa1 = document.querySelector('.tarefa1');
+        let botao1 = document.createElement('button');
+        tarefa1.textContent = '';
+        botao1.textContent = 'Botão';
+        botao1.addEventListener('click', alerta)
+        function alerta() {
+          alert('você clicou no botão');
+        };
+        tarefa1.appendChild(botao1);
+      </script>
+      <hr />
+      <h2>Tarefa 2</h2>
+      <p>
+        Para realizar essa tarefa utilize à tag &lt;script&gt; abaixo. Você deve
+        declarar duas variáveis, uma chamada <strong>productPrice</strong> com o
+        valor <strong>59,99</strong> e a outra chamada
+        <strong>discount</strong> com o valor <strong>0,30</strong>. Na
+        sequência adicione um botão um botão HTML abaixo da tag &lt;script&gt; e
+        utilizando um <strong>EventListener</strong> adicione um evento a esse
+        botão, onde ao ser clicado deve-se multiplicar
+        <strong>productPrice</strong> por <strong>discount</strong> e então
+        exibir um alerta contendo a mensagem "Desconto de R$(resultado)", sendo
+        <strong>discount</strong> o resultado da multiplicação.
+      </p>
+      <div class="tarefa2"></div>
+      <script language="javascript" type="text/javascript">
+        //JavaScript para a tarefa 2
+        //JavaScript para a tarefa 2
+        //JavaScript para a tarefa 2
+        let productPrice = 59.99;
+        let discount = 0.30;
+        let tarefa2 = document.querySelector('.tarefa2');
+        let botao2 = document.createElement('button');
+        tarefa2.textContent = '';
+        botao2.textContent = 'Botão';
+        botao2.addEventListener('click', calcular)
+        function calcular() {
+          let totalPrice = productPrice * discount;
+          return alert(`Desconto de R$${totalPrice.toFixed(2)}`)
+        }
+        tarefa2.appendChild(botao2);
+
+
+      </script>
+      <hr />
+      <h2>Bônus</h2>
+      <p>
+        Para essa última tarefa você irá precisar de duas imagens do mesmo
+        tamanho. Adicione uma imagem a está página usando uma tag HTML &lt;img
+        /&gt;. Usando os manipuladores de eventos
+        <strong>onMouseOver()</strong> e <strong>onMouseLeave()</strong>, faça com
+        que a imagem mude para a segunda imagem quando o ponteiro do mouse
+        passar sobre ela e, em seguida, voltar para a primeira imagem quando o
+        ponteiro do mouse for movido para fora da imagem.
+      </p>
+      <p>
+        Além disso, sempre que um dos eventos for realizado deve-se logar no
+        console qual dos eventos acabou de ocorrer.
+      </p>
+      <!-- Adicione a tag <img /> aqui -->
+      <img src="https://images.unsplash.com/photo-1599687267899-09999a5d92fb?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1355&q=80" alt="">
+      <script>
+        let img = document.querySelector('img');
+        img.addEventListener('mouseover', change);
+        function change() {
+          img.src = 'https://images.unsplash.com/photo-1599652522180-5378a3be1b42?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80';
+          console.log(event.type);
+        }
+        let imgSrc = document.querySelector('img').src;
+        
+        img.addEventListener('mouseleave', changeBack);
+        function changeBack() {
+          img.src = imgSrc;
+          console.log(event.type);
+        }
+      </script>
+    </div>
+  </body>
+</html>
