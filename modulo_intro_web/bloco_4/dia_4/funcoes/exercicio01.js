@@ -12,5 +12,6 @@ function palindromo(palavra){
     return "INFELIZMENTE, NÃO SOU UM PALÍNDROMO"
   }
 }
+let retornado = palindromo('batata');
 
-console.log(palindromo('batata'));
+console.log(retornado);
