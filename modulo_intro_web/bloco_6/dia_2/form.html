@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Formulário</title>
+  <!-- <link rel="stylesheet" href="css/bootstrap-reboot.min.css"> -->
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+</head>
+<body>
+  <header>
+    <h1>Formulário de currículo!</h1>   
+  </header>
+  <form action="">
+    <fieldset>
+    
+    <div class="form-group">
+      <label for="">Nome</label>
+      <input class="form-control" id="nome" type="text" required="required" maxlength="40">
+    </div>
+
+    <div class="form-group">
+      <label for="">E-mail</label>
+      <input class="form-control" id="email" type="text" required="required" maxlength="50">
+    </div>
+    
+    <div class="form-group">
+      <label for="">CPF</label>
+      <input class="form-control" id="cpf" type="text" required="required" maxlength="11">
+    </div>
+    
+    <div class="form-group">
+      <label for="">Endereço</label>
+      <input class="form-control" id="endereco" type="text" required="required" maxlength="200">
+    </div>
+    <div class="form-group">
+      <label for="">Cidade</label>
+      <input class="form-control" id="cidade" type="text" required="required" maxlength="28">
+    </div>
+
+    <div class="form-group">
+      <label for="state">Estado</label>
+      <select class="form-control" name="uf" id="estado" required="required">
+          <option value="">Selecione o Estado</option>          
+      </select>
+    </div>
+
+    <div class="form-check form-check-inline">
+      <label class="form-check-label"> Selecione tipo de imóvel que reside:</label>
+      <input class="form-check-input" name="residencia" id="residencia1" value="Casa" type="radio">
+        <label class="form-check-label" for="residencia1"> Casa </label>
+        <input class="form-check-input" name="residencia" id="residencia2" value="Apartamento" type="radio">
+        <label class="form-check-label" for="residencia2"> Apartamento</label>
+    </div>
+    </fieldset>
+    <fieldset>
+      <label for="">Resumo do currículo</label>
+      <textarea maxlength="100" name="" id="resumo" required="required" cols="30" rows="10"></textarea>
+
+      <label for="">Cargo</label>
+      <input type="text" id="cargo" required="required" maxlength="40">
+
+      <label for="">Descrição do cargo</label>
+      <input type="text" id="descricao" maxlength="500" required="required">
+
+      <label for="">Data de início</label>
+      <input type="text" required="required" id="data">
+    </fieldset>
+
+    <button type="submit" id="botao">Enviar dados!</button>
+  </form>
+  <script src="script.js"></script>
+</body>
+</html>
