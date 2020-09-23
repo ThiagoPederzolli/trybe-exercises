@@ -1,0 +1,48 @@
+* {
+  margin: 0px;
+  padding: 0px;  
+}
+
+.centro {
+  background-color: #333;
+  height: 100vh;
+  margin: 0 auto;
+  width: 90vw;
+}
+
+.topo {
+  width: 100%;
+  height: 20%;
+  background-color: red;
+}
+
+.topo h1 {
+  color: white;
+  font-size: 2em;
+}
+
+.padding-colunas {
+  padding: 10px;
+}
+.colunas {
+  display: flex;
+}
+
+.colunas2 {
+  background: gray;  
+  text-align: center;
+  width: 50%;
+}
+
+@media (min-width: 320px) and (max-width: 568px) {
+  .centro {
+    width: 100vw;
+  }
+  .topo {
+    background: yellow;
+  }
+  .topo h1 {
+    color: red;
+  }
+    
+}
