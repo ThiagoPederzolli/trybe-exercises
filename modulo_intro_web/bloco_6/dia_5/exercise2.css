@@ -1,0 +1,49 @@
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.indice {
+  display: flex;
+  justify-content: space-between;  
+}
+
+.title, .chapters, .information {
+  text-align: center;
+}
+
+.indice li {
+  margin-right: 10px;
+}
+
+.aside-two {  
+  margin-bottom: 20%;
+}
+
+.chapter-title {
+  font-size: 1em;
+  margin-left: 10px;
+}
+
+.main-content {
+  text-align: justify;
+  margin: 0 20px;  
+}
+.main-content p {
+  font-size: 1em;
+  line-height: 1.25em;
+}
+
+footer h3 {
+  font-size: 0.8em;
+  text-align: center;
+}
+
+footer p {
+  margin-left: 5%;
+  font-size: 0.6em;
+  line-height: 1.2em;
+}
