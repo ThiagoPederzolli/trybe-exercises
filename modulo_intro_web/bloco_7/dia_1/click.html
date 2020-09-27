@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ClickCount</title>
+</head>
+<body>
+  <h1>Número de clicks</h1>
+  <p id="contador"></p>
+  <button id="btn">Clique aqui</button>
+  <script>
+    let clickCount = 0;
+    const btn = document.querySelector('#btn');
+    const contador = document.querySelector('#contador');
+    btn.addEventListener('click', () => {
+      clickCount += 1;
+      contador.innerText = clickCount;
+    })
+  </script>
+</body>
+</html>
