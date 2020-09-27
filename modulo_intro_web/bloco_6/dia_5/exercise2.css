@@ -1,0 +1,91 @@
+html {
+  box-sizing: border-box;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+.indice {
+  display: flex;
+  justify-content: space-between;  
+}
+
+.title, .chapters, .information {
+  text-align: center;
+}
+
+.indice li {
+  margin-right: 5%;
+}
+
+.aside-two {  
+  margin-bottom: 20%;
+}
+
+.chapter-title {
+  font-size: 1em;
+  margin-left: 5%;
+}
+
+.main-content {
+  text-align: justify;
+  margin: 0 5%;  
+}
+.main-content p {
+  font-size: 1em;
+  line-height: 1.25em;
+}
+
+footer h3 {
+  font-size: 0.8em;
+  text-align: center;
+}
+
+footer p {
+  margin-left: 5%;
+  font-size: 0.6em;
+  line-height: 1.2em;
+}
+
+@media (min-width: 600px) {
+  .indice {
+    justify-content: space-around;
+  }
+  
+  .asides {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 10%;
+  }
+  .chapter-title {
+    font-size: 1.5em;
+    margin-left: 5%;
+  }
+  .aside-two {  
+    margin-bottom: 0;
+  }
+}
+
+@media (min-width: 900px) {
+  .asides {
+    margin-bottom: 100x;
+  }
+  .chapter-title {
+    text-align: center;
+  }
+  .main-content p {
+    margin: 0 100px;
+  }
+  footer p {
+    text-align: center;
+  }
+}
+
+
+@media (min-width: 1200px) {
+  .main-content p {
+    line-height: 3m;
+    margin: 0 150px;
+  }
+}
