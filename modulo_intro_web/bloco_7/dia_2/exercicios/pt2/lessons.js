@@ -9,6 +9,7 @@ const lesson2 = {
   materia: 'História',
   numeroEstudantes: 20,
   professor: 'Carlos',
+  grau: 'médio'
 };
 
 const lesson3 = {
@@ -36,8 +37,12 @@ const showKeys = key => Object.keys(key);
 
 const objectLength = key => Object.keys(key).length;
 
-console.log(objectLength(lesson3));
+// console.log(objectLength(lesson3));
 
 const showValues = key => Object.values(key);
 
-console.log(showValues(lesson5));
+// console.log(showValues(lesson5));
+
+const allLessons = Object.assign({}, {lesson1, lesson2 , lesson3});
+
+// console.log(allLessons);
