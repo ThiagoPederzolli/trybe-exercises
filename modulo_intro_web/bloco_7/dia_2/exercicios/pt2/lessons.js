@@ -82,13 +82,13 @@ function verify(objeto, chave, valor) {
 // verify(lesson3, 'materia', 'Maria Clara');
 // Output: false
 
-function totalStudents(objeto) {
+function mathStudents(objeto) {
   const keysObject = Object.keys(objeto);
   let totalStudent = 0;
   for (let i = 0; i < keysObject.length; i += 1) {
-    totalStudent += objeto[keysObject[i]].numeroEstudantes;
+    if (objeto[keysObject[i]].materia === 'Matemática') totalStudent += objeto[keysObject[i]].numeroEstudantes;
   }
   console.log(totalStudent);
 }
 
-// totalStudents(allLessons);
+mathStudents(allLessons);
