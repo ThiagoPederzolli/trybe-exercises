@@ -28,4 +28,12 @@ const lesson5 = {
 const incrementKey = (objeto, chave, valor) => objeto[`${chave}`] = valor;
 
 incrementKey(lesson5, 'grau', 'médio');
-console.log(lesson5);
+// console.log(lesson5);
+
+const showKeys = key => Object.keys(key);
+
+// console.log(showKeys(lesson3));
+
+const objectLength = key => Object.keys(key).length;
+
+console.log(objectLength(lesson3));
