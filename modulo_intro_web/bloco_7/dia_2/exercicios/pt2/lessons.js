@@ -91,4 +91,4 @@ function mathStudents(objeto) {
   console.log(totalStudent);
 }
 
-mathStudents(allLessons);
+// mathStudents(allLessons);
