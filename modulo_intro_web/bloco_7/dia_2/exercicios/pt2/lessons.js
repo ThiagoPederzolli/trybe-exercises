@@ -58,9 +58,37 @@ function totalStudents(objeto) {
 
 // totalStudents(allLessons);
 
-const GetValue = (objeto, valor) => {
-  const keysObject = Object.keys(objeto);
-  const valueByNumber = objeto[keysObject[valor]];
-  console.log(valueByNumber);
-}
+// const GetValue = (objeto, valor) => {
+//   const keysObject = Object.keys(objeto);
+//   const valueByNumber = objeto[keysObject[valor]];
+//   console.log(valueByNumber);
+// }
+
+const GetValue = (objeto, valor) => Object.values(objeto)[valor]
 // GetValue(lesson3, 2);
+// console.log(GetValue(lesson1, 0));
+
+function verify(objeto, chave, valor) {
+  const pair = Object.entries(objeto);
+  let pairExists = 'Não existe';
+  for (let i = 0; i < pair.length; i += 1) {
+    if (pair[i][0] === chave && pair[i][1] === valor) pairExists = 'Existe';
+  }
+  console.log(pairExists)
+}
+
+// verify(lesson3, 'turno', 'noite');
+// Output: true,
+// verify(lesson3, 'materia', 'Maria Clara');
+// Output: false
+
+function totalStudents(objeto) {
+  const keysObject = Object.keys(objeto);
+  let totalStudent = 0;
+  for (let i = 0; i < keysObject.length; i += 1) {
+    totalStudent += objeto[keysObject[i]].numeroEstudantes;
+  }
+  console.log(totalStudent);
+}
+
+// totalStudents(allLessons);
