@@ -37,3 +37,7 @@ const showKeys = key => Object.keys(key);
 const objectLength = key => Object.keys(key).length;
 
 console.log(objectLength(lesson3));
+
+const showValues = key => Object.values(key);
+
+console.log(showValues(lesson5));
