@@ -56,4 +56,11 @@ function totalStudents(objeto) {
   console.log(totalStudent);
 }
 
-totalStudents(allLessons);
+// totalStudents(allLessons);
+
+const GetValue = (objeto, valor) => {
+  const keysObject = Object.keys(objeto);
+  const valueByNumber = objeto[keysObject[valor]];
+  console.log(valueByNumber);
+}
+// GetValue(lesson3, 2);
