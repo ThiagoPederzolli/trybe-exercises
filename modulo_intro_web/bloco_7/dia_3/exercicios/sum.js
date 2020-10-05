@@ -9,15 +9,15 @@ function sum(a, b) {
 }
 
 // implemente seus testes aqui
-// assert(sum(4, 5) === 9);
-// assert(sum(0,0) === 0);
-// assert(sum(4, '5') === 9);
-// assert.strictEqual(typeof sum, 'function');
-// assert.throws(() => {
-//   sum(4, '5');
-// });
-// assert.throws(() => {
-//   sum(4, '5');
-// }, /^Error: parameters must be numbers$/);
+assert.strictEqual(sum(4, 5), 9);
+assert.strictEqual(sum(0,0), 0);
+assert.notStrictEqual(sum(4, '5'), 9);
+assert.strictEqual(typeof sum, 'function');
+assert.throws(() => {
+  sum(4, '5');
+});
+assert.throws(() => {
+  sum(4, '5');
+}, /^Error: parameters must be numbers$/);
 
 // console.log(sum(4, '5'));

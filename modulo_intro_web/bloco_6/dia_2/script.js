@@ -102,4 +102,4 @@ function submitForm() {
   
 }
 
-botao.addEventListener('click', submitForm)
+botao.addeventListener('click', submitForm)
