@@ -90,11 +90,11 @@ const expected_result = [
 
 function oldBooks() {
   // escreva seu código aqui
-  let olderBooks;
+  
   const data = new Date();
   const ano = data.getUTCFullYear()
   // console.log(ano);
-  olderBooks = books.filter(year => (ano - year.releaseYear) >= 60);
+  const olderBooks = books.filter(year => (ano - year.releaseYear) >= 60);
   olderBooks.sort((a,b) => a.releaseYear - b.releaseYear);
   // console.log(olderBooks);
   return olderBooks;

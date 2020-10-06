@@ -94,12 +94,13 @@ const expected_result = [
 
 function nameAndAge() {
   // escreva seu código aqui
-  let nomeEIdade;
-  nomeEIdade = books.map((book) => {
-    return { age: parseInt(book.releaseYear - book.author.birthYear), author: book.author.name}
-  });
+ 
+  const nomeEIdade = books.map((book) => {
+  return {age: parseInt(book.releaseYear - book.author.birthYear), author: book.author.name} 
+});
   // console.log(nomeEIdade[0].age);
   nomeEIdade.sort((a, b) => a.age - b.age);
+  // console.log(nomeEIdade);
   return nomeEIdade;
 }
 

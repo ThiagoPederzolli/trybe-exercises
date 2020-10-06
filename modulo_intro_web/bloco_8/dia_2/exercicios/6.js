@@ -71,14 +71,14 @@ const expected_result = [
 // Crie um array com o nome de todos os livros com mais de 60 anos de publicação.
 function oldBooks() {
   // escreva seu código aqui
-  let olderBooks;
-  let nameBooks;
+  // let olderBooks;
+  // let nameBooks;
   const data = new Date();
   const ano = data.getUTCFullYear()
   // console.log(ano);
-  olderBooks = books.filter(year => (ano - year.releaseYear) >= 60);
+  const olderBooks = books.filter(year => (ano - year.releaseYear) >= 60);
   olderBooks.sort((a,b) => b.releaseYear - a.releaseYear);
-  nameBooks = olderBooks.map((title) => title.name);
+  const nameBooks = olderBooks.map((title) => title.name);
   // nameBooks.sort((a, b) => b.length - a.length);
   // console.log(nameBooks);
   return nameBooks;
