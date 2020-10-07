@@ -68,11 +68,17 @@ const books = [
 function allNames() {
   // escreva seu código aqui
   const nameAuthors = books.map((book) => book.author.name);
-  const stringAuthors = nameAuthors.reduce((previous, current) => `${previous} ${current},`, 'Nomes:');
+  const stringAuthors = nameAuthors.reduce((previous, current,) => `${previous} ${current},`, 'Nomes:');
   // const change = stringAuthors[stringAuthors.length - 1]
   const newString = stringAuthors.replace('Lovecraft,', 'Lovecraft.');
   return newString;
 }
 // allNames();
+
+// Gabarito consultado por não conseguir resolver o replace da vírgula por ponto:
+// const reduceNames = (acc, book, index, array) => {
+//   if (index === array.length - 1) return `${acc} ${book.author.name}.`;
+//   return `${acc} ${book.author.name},`;
+// };
 
 assert.strictEqual(allNames(), "Nomes: George R. R. Martin, J. R. R. Tolkien, Isaac Asimov, Frank Herbert, Stephen King, H. P. Lovecraft.");
