@@ -1,5 +1,5 @@
 const assert = require('assert')
-
+// Escreva a função personLikes, que dado um objeto de parâmetro que representa uma pessoa, retorna todos os gostos daquela pessoa, conforme mostrado abaixo:
 const alex = {
     name: "Alex",
     age: 26,
