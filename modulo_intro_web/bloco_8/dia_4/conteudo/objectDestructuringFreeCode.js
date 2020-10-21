@@ -3,13 +3,14 @@ const HIGH_TEMPERATURES = {
   today: 77,
   tomorrow: 80
 };
+// const altasTemperaturas = [ 5, 77, 80];
 // Replace the two assignments with an equivalent destructuring assignment. It should still assign the variables today and tomorrow the values of today and tomorrow from the HIGH_TEMPERATURES object.
 // You should remove the ES5 assignment syntax.
 // You should use destructuring to create the today variable.
 // You should use destructuring to create the tomorrow variable.
 // today should be equal to 77 and tomorrow should be equal to 80.
 
-const {today, tomorrow} = HIGH_TEMPERATURES;
+// function hoje([ontem, hoje, amanha]) = HIGH_TEMPERATURES;
 
 // Replace the two assignments with an equivalent destructuring assignment. It should still assign the variables highToday and highTomorrow the values of today and tomorrow from the HIGH_TEMPERATURES object
 // You should remove the ES5 assignment syntax.
