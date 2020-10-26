@@ -1,7 +1,9 @@
-const paraFixar1 = require('./paraFixar1');
+// const paraFixar1 = require('./paraFixar1');
+const randomNumber = () => Math.floor(Math.random() * 100);// Lógica de gerar o número
+
+const isDivisible = (number) => (randomNumber() % number) === 0
 
 it('randomNumber é chamada', () => {
-  paraFixar1.randomNumber = jest.fn().mockReturnValue(4);
-  paraFixar1.isDivisible(2)
-  expect(paraFixar1.randomNumber).toHaveBeenCalled();
+  const randomNumber = jest.fn().mockReturnValue(4);
+  return expect(randomNumber).toHaveBeenCalled();
 })
