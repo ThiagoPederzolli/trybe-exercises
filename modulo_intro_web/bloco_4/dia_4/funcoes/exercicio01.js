@@ -1,7 +1,5 @@
 function palindromo(palavra){
   let palindromo = "";
-
-
   for(i = palavra.length - 1; i >= 0; i -= 1) {
     palindromo += palavra[i]
   }
