@@ -24,7 +24,7 @@ describe('getUserName tests', () => {
   });
   it('Should return Paul for arg id number 5', async () => {
     const name = await getUserName(5);
-    expect(name).toEqual( 'Pul');
+    expect(name).toEqual( 'Paul');
   }); 
 });
 
