@@ -9,7 +9,13 @@
 //   reverseInt(-90) === -9
 
 function reverseInt(n) {
-
+  let number = "";
+  let absoluteNumber = Math.abs(n).toString();
+  for(i = absoluteNumber.length - 1; i >= 0; i -= 1) {
+    number += absoluteNumber[i];
+  }
+  return (n >= 0) ? +number : -number;
 }
 
+reverseInt(-15)
 module.exports = reverseInt;
