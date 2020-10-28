@@ -7,7 +7,10 @@ class VideoGameList extends Component {
     // console.log(Component)
     // console.log(bestSellingVideoGames[0])
     return (<div>
-      <VideoGame title={bestSellingVideoGames[0].title} developer={bestSellingVideoGames[0].developer} />
+      {bestSellingVideoGames.map((game, index) => {
+        return <VideoGame key={index} title={game.title} developer={game.developer} />
+      })
+      }
     <span>Eu sou o componente VideoGameList</span>
     </div>)
   }
