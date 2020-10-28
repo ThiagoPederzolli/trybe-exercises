@@ -2,7 +2,9 @@ import React, { Component } from 'react';
 
 class VideoGame extends Component {
   render() {
-    return (<span>Eu sou o componente VideoGame</span>)
+    // console.log(Component)
+    const { title, developer } = this.props;
+    return (<span>{title} desenvolvido por {developer}</span>)
   }
 }
 

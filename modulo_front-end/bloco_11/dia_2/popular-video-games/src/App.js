@@ -1,9 +1,10 @@
 import './App.css';
 import VideoGame from './VideoGame';
+import VideoGameList from './VideoGameList';
 
 function App() {
   return (
-    <VideoGame />
+    <VideoGameList />
   );
 }
 
