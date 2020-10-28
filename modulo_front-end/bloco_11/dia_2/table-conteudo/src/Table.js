@@ -29,7 +29,7 @@ class Table extends Component {
       users.map(user => {
         return (
           <div>
-              <UserName name={user.name}/>
+              <UserName />
             <UserOtherInfo email={user.email} id={user.id} />
           </div>
         )
