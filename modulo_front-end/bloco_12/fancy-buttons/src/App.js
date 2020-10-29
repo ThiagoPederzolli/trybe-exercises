@@ -16,6 +16,15 @@ class App extends React.Component {
     this.setState((estadoAnterior, _props) => ({
       cliques: estadoAnterior.cliques + 1
     }));
+    const btn = document.querySelector('button');
+    console.log(this.state.cliques);
+    if ((this.state.cliques + 1) % 2 === 0) {
+      btn.classList.add('green');
+    } else {
+      btn.classList.remove('green');
+    }
+    
+
   }
   
   render() {
