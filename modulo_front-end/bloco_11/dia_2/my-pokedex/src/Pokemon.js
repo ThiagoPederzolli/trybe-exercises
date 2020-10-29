@@ -34,7 +34,3 @@ Pokemon.propTypes = {
 }
 
 export default Pokemon;
-
-{/* <div className="infoContainer">
-<p>{this.props.name}</p>
-</div> */}
