@@ -4,10 +4,7 @@ import pokemons from './data';
 import './Pokedex.css'
 class Pokedex extends Component {
   render() {    
-    return (<div className="pokedex"> 
-      {/* { pokemons.map((pokemon) => {
-        <Pokemon name={pokemon.name} />
-      })} */}
+    return (<div className="pokedex">   
       {
       pokemons.map((pokemon) => {
         return (
