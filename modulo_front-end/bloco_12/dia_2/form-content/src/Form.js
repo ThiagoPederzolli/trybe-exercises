@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-
+import EstadoFavorito from './EstadoFavorito';
 class Form extends Component {
   constructor() {
     super();
@@ -29,31 +29,37 @@ class Form extends Component {
       <div>
         <h1>Esados e React: ferramenta incrível ou reagindo a regionalismos.</h1>
         <form className="form" />
-        <label>
-          Diga qual é o seu Estado Favorito do Brasil ou do React, você quem sabe.
-          <textarea name="estadoFavorito" value={this.state.estadoFavorito} onChange={this.handleChange}/>
-        </label>
+        <EstadoFavorito value={this.state.estadoFavorito} handleChange={this.handleChange}/>
 
+      <fieldset>
         <label>
           Email
           <input name="email" type="email" value={this.state.email} onChange={this.handleChange}/>
         </label>
+      </fieldset>
 
+      <fieldset>
         <label>
           Nome
           <input name="nome" type="text" value={this.state.nome} onChange={this.handleChange}/>
         </label>
+      </fieldset>
 
+      <fieldset>
         <label>
           Idade 
           <input name="idade" type="number" value={this.state.idade} onChange={this.handleChange} />
         </label>
+      </fieldset>
 
+      <fieldset>
         <label>
           Vai comparecer à conferência?
           <input name="vaiComparecer" type="checkbox" value={this.state.vaiComparecer} onChange={this.handleChange} />
         </label>
+      </fieldset>
 
+      <fieldset>
         <label>
           Escolha sua palavra chave favorita:
           <select name="palavraChaveFavorita" value={this.state.palavraChaveFavorita} onChange={this.handleChange}>
@@ -63,6 +69,14 @@ class Form extends Component {
             <option value="hooks">Hooks</option>
           </select>
         </label>
+      </fieldset>
+
+      <fieldset>
+        <label>
+          Envie cópia do seu documento:
+          <input type="file" />
+        </label>
+      </fieldset>
       </div>
     )
   }
