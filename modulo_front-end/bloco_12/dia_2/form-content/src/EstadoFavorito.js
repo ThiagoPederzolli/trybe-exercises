@@ -3,6 +3,8 @@ import React, { Component } from 'react';
 class EstadoFavorito extends Component {
   render() {
     const { value, handleChange } = this.props;
+    let error = undefined
+    if (value.length > 120) error = 'Texto muito grande!'
     return (
       <div>
         <fieldset>
@@ -13,6 +15,7 @@ class EstadoFavorito extends Component {
             value={value}
             onChange={handleChange}/>
           </label>
+          <span>{error ? error : ''}</span>
         </fieldset>
     </div>
     )
