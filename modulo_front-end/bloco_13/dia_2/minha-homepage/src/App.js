@@ -10,7 +10,7 @@ function App() {
     <BrowserRouter>
       <Route path="/about" component={About} />
       <Route path="/howto" component={HowTo} />
-      <Route path="/profile"><Profile/></Route>
+      <Route path="/profile/:ship" render={(props) => <Profile {...props} name="Troll, o ogro da web" />} />
       <Route exact path="/" component={Home} />
     </BrowserRouter>
   );
