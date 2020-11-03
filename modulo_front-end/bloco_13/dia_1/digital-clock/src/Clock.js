@@ -16,11 +16,9 @@ class Clock extends Component {
     }, 1000);
   }
 
-  componentDidUpdate() {
- 
-    
+  // componentDidUpdate() {   
 
-  }
+  // }
 
 
   render() {
