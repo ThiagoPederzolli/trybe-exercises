@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import ValidEmail from './ValidEmail';
 import './App.css';
 
 class App extends Component {
@@ -39,7 +40,7 @@ class App extends Component {
           onClick={() => this.changeSaveEmail(email)}
         />
         <input id="btn-id" type="button" value="Voltar" />
-        <h2 data-testid="id-email-user">{`Valor: ${saveEmail}`}</h2>
+        <ValidEmail email={saveEmail} />
       </div>
     );
   }
