@@ -34,6 +34,11 @@ function App() {
         <Route path="/comments">
           <Comments />
         </Route>
+        <Route>
+          <section>
+            <h1>Página não encontrada</h1>
+          </section>
+        </Route>
       </Switch>
     </div>
   );
