@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Redux - Aula1</title>
+  <script src="./immer.umd.production.min.js"></script>
+
+  <script src="./redux.min.js"></script>
+</head>
+
+<body>
+  <div>
+    Clicked: <span id="value">0</span> times
+    <button id="increment">+</button>
+    <button id="decrement">-</button>
+    <button id="multi">Incrementa 10</button>
+  </div>
+  <script>
+
+    const INCREMENT = 'INCREMENT'
+    const DECREMENT = 'DECREMENT'
+    const MULTI = 'MULTI'
+    function counterReducer(state = 0, action) {
+      switch (action.type) {
+        case INCREMENT:
+          return state + 1;
+        case DECREMENT:
+          return state - 1
+        case MULTI:
+          return state + 10;
+        default:
+          return state
+      }
+    }
+
+    const store = Redux.createStore(counterReducer)
+
+    const btnIncrementar = document.querySelector('#increment');
+    const btnDecrementar = document.querySelector('#decrement');
+    const btnMulti = document.querySelector('#multi');
+    const valueOutput = document.querySelector('#value');
+    btnIncrementar.addEventListener('click', () => {
+      store.dispatch({ type: INCREMENT })
+    });
+
+    btnDecrementar.addEventListener('click', () => {
+      store.dispatch({ type: DECREMENT })
+    });
+    btnMulti.addEventListener('click', () => {
+      store.dispatch({ type: MULTI })
+    });
+
+    store.subscribe(() => valueOutput.innerText = store.getState())
+  </script>
+</body>
+
+</html>
