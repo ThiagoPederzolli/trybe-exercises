@@ -1,8 +1,8 @@
-const INITIAL_STATE = [];
+const initialState = [];
 
-function listReducer(state = INITIAL_STATE, action) {
-  switch (action.type) {
-    case ADD_ELEMENT:
+function listReducer(state = initialState, action) {
+  switch(action.type) {
+    case 'ADD_ELEMENT':
       return [...state, action.value];
     default:
       return state;

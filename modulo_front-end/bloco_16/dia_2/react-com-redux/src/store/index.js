@@ -1,8 +1,7 @@
 import { combineReducers, createStore } from 'redux';
-import listReducer from '../reducers';
+import listReducers from '../reducers';
 
-const rootReducer = combineReducers(listReducer);
-
-const store = createStore(rootReducer);
+const reducer = combineReducers({ listReducers });
+const store = createStore(reducer);
 
 export default store;
