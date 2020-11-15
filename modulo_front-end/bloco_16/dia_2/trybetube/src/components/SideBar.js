@@ -1,39 +1,11 @@
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
+import { connect } from 'react-redux';
+import selectMovie from '../actions/movieAction';
 
 class SideBar extends Component {
-  constructor() {
-    super();
-
-    this.state = {
-      categories: [
-        {
-          id: 1,
-          name: 'Drama',
-          movies: [
-            { id: 1, title: 'The boy in the striped pajamas', released: 2008 },
-            { id: 2, title: 'The pursuit of happiness', released: 2006 },
-            { id: 3, title: 'Fences', released: 2016 },
-          ],
-        },
-        {
-          id: 2,
-          name: 'Action',
-          movies: [{ id: 4, title: 'Shooter', released: 2007 }],
-        },
-        {
-          id: 3,
-          name: 'Romantic',
-          movies: [
-            { id: 5, title: 'Me before you', released: 2016 },
-            { id: 6, title: 'The lake house', released: 2006 },
-          ],
-        },
-      ],
-    };
-  }
-
   render() {
-    const { categories } = this.state;
+    const { categories, selectMovie } = this.props;
     return (
       <aside>
         {categories.map(category => (
@@ -43,6 +15,12 @@ class SideBar extends Component {
               {category.movies.map(movie => (
                 <li key={movie.id}>
                   {movie.title} was released in {movie.released}
+                  <button
+                    type="button"
+                    onClick={() => selectMovie(category, movie)}
+                  >
+                    Selecionar
+                  </button>
                 </li>
               ))}
             </ul>
@@ -53,4 +31,21 @@ class SideBar extends Component {
   }
 }
 
-export default SideBar;
+SideBar.propTypes = {
+  categories: PropTypes.arrayOf(PropTypes.object).isRequired,
+};
+
+const mapStateToProps = state => ({
+  // a chave do objeto será a prop e o valor será a informação que a prop vai ter.
+
+  // Acessando a informação:
+  // state = estado do Redux
+  // movieReducer, gaveta desse reducer,
+  // categiries = categorias dentro da gaveta movieReducer
+  categories: state.movieReducer.categories,
+});
+
+const mapDispatchToProps = dispatch => ({
+  selectMovie: (category, movie) => dispatch(selectMovie(category, movie)),
+});
+export default connect(mapStateToProps, mapDispatchToProps)(SideBar);
