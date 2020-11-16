@@ -1,6 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import products from '../products';
+import addToCart from '../actions';
+import { connect } from 'react-redux';
 
 class ProductList extends React.Component {
   // validateQuantity(product, cart, addToCart) {
@@ -12,6 +14,7 @@ class ProductList extends React.Component {
   // }
 
   render() {
+    const { addToCartAction } = this.props;
     return (
       <div>
         <h2>Produtos disponíveis</h2>
@@ -33,7 +36,12 @@ class ProductList extends React.Component {
                 </td>
                 <td>{product.stockQuantity}</td>
                 <td>
-                  <button type="button">Adicionar</button>
+                  <button
+                    type="button"
+                    onClick={() => addToCartAction(product)}
+                  >
+                    Adicionar
+                  </button>
                 </td>
               </tr>
             ))}
@@ -48,4 +56,7 @@ ProductList.propTypes = {
   addToCartAction: PropTypes.func.isRequired,
 };
 
-export default ProductList;
+const mapDispatchToProps = dispatch => ({
+  addToCartAction: product => dispatch(addToCart(product)),
+});
+export default connect(null, mapDispatchToProps)(ProductList);
