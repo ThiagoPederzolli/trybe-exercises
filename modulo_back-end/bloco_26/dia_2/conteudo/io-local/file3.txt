@@ -1,0 +1,2 @@
+Visualizando a diferença entre criar uma cadeida de Callbacks e gerar um callback hell
+Também aprendendo como uma cadeia de Promises podem facilitar a legibilidade e performance de um código, nos livrando de um callback hell.
