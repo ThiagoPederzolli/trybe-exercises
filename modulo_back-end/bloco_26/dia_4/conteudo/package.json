@@ -1,0 +1,14 @@
+{
+  "name": "conteudo",
+  "version": "1.0.0",
+  "description": "testes de middleware do express",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Thiago Pederzolli",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
