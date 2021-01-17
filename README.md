@@ -20,6 +20,9 @@ Códigos mais bem estruturados, de acordo com padrões de boas práticas, code c
 <p>
 Logo abaixo possui um sumário do módulo já concluído por mim de Fundamentos do Desenvolvimento Web e do módulo Desenvolvimento Front-end, módulo no qual me encontro cursando. Através do sumário é possível navegar pelo Readme que contém informações mais detalhadas do estudado em cada bloco.
 </p>
+<p>
+<em>OBS:</em> blocos que não estejam listados tratam-se de blocos exclusivamente direcionados para projetos em grupo, por consequência não houve exercício e material para ser subido aqui. Há também alguns blocos que não possuem arquivos de algum dia ou não possuem arquivo algum, isso se dá por o conteúdo do bloco ser de um aspecto mais teórico ou pelas atividades terem sido realizadas em outras plataformas.
+</p>
 
 ---
 <h2>Sumário</h2>
@@ -47,6 +50,21 @@ Logo abaixo possui um sumário do módulo já concluído por mim de Fundamentos 
 - <a href="#bloco13">Bloco 13: Ciclo de Vida de Componentes e React Router </a>
 - <a href="#bloco15">Bloco 15: Testes automatizados com React Testing Library </a>
 - <a href="#bloco16">Bloco 16: Gerenciamento de estado com Redux </a>
+- <a href="#bloco18">Bloco 18: Context API e React Hooks </a>
+
+</details>
+
+<details>
+  <summary>Desenvolvimento Back-end</summary>
+
+- <a href="#bloco20">Bloco 20: Introdução à SQL </a>
+- <a href="#bloco21">Bloco 21: Funções SQL, Joins e Subqueries </a>
+- <a href="#bloco22">Bloco 22: Normalização e Modelagem de Banco de Dados </a>
+- <a href="#bloco23">Bloco 23: Introdução ao MongoDB </a>
+- <a href="#bloco24">Bloco 24: MongoDB: Updates Simples e Complexos </a>
+- <a href="#bloco25">Bloco 25: MongoDB: Aggregation Framework </a>
+- <a href="#bloco26">Bloco 26: Introdução ao desenvolvimento Web com NodeJS </a>
+- <a href="#bloco27">Bloco 27: NodeJS: Camada de Serviço e Arquitetura Rest e Restful </a>
 
 </details>
 
@@ -123,7 +141,7 @@ Aprendemos a salvar nossos projetos no GitHub e como ele também possui várias 
 
 <h2 id="bloco9"> Bloco 9: JavaScript Assíncrono e Promises </h2>
 <p>
-Nesse bloco aprendemos a lidar com assíncronicidade no JavaScript. Em prol do dinamismo, nem sempre as informações chegam no momento em que são requisitadas, as vezes dependemos de fontes externas e isso demanda um tempo de resposta que não sabemos especificamente quanto irá durar esse tempo.
+Nesse bloco aprendemos a lidar comBloco 25: MongoDB: Aggreegation Frameworksíncronicidade no JavaScript. Em prol do dinamismo, nem sempre as informações chegam no momento em que são requisitadas, as vezes dependemos de fontes externas e isso demanda um tempo de resposta que não sabemos especificamente quanto irá durar esse tempo.
 </p>
 <p>
 Portanto, precisamos saber como lidar com essas situações através de async/await para informar que nossa função será assíncrona e deverá aguardar a resposta de uma requisição feita à uma fonte externa para continuar com alguma funcionalidade.
@@ -182,4 +200,78 @@ Aprendemos o redux-thunk, porque a estrutura principal do Redux é sincrona e co
 </p>
 <p>
 Dada a certa complexidade na estrutura e fluxo do Redux, também vimos conteúdos referentes a realização de testes em projetos React com Redux, auxiliando na melhoria do código e segurança da aplicação.
+</p>
+
+<h2 id="bloco18"> Bloco 18: Context API e React Hooks </h2>
+<p>
+Context API é uma forma que o React oferece para proporcionar que seja viável passar os dados de componentes sem precisar passar manualmente em todos os níveis, se assemelha em alguns aspectos ao Redux.
+</p>
+<p>
+Composta principalmente pelo Provider e Consumer, é uma forma de Prover os dados considerados globais para toda aplicação e garantir que sejam consumidos apenas nos componentes que realmente precisarem daqueles dados.
+</p>
+<p>
+Já os Hooks são funções que permitem o uso de diversos recursos sem a necessidade de Componentes de Classe. Com os Hooks, podemos criar componentes chamados Componentes Funcionais e usar métodos do React como o useState para trabalhar com estado, useEffect para ações baseadas nos ciclos de vida do componente, useContext para aceessar informações do Context API.
+</p>
+
+---
+
+<h1 align="center"> Desenvolvimento Back-end </h1>
+
+<h2 id="bloco20"> Bloco 20: Introdução à SQL </h2>
+<p>
+Primeiro Bloco do Módulo de Back-end, entramos em contato com o MySQL. Iniciando com uma vasta apresentação dos principais aspectos de um banco de dados MySQL, explicando principais conceitos de entidade, propriedades, colunas, linhas, tabelas, relação entre dados(um para um, um para muitos..)
+</p>
+<p>
+Também aprendemos os principais comandos básicos de manipulação e pesquisa em MySQL, como SELECT, INSERT, UPDATE, DELETE, WHERE, TRUNCATE.
+</p>
+
+<h2 id="bloco21"> Bloco 21: Funções SQL, Joins e Subqueries </h2>
+<p>
+Aprofundando mais em relação ao uso de MySQL, esse bloco aborda as funções mais utilizadas na manipulação de dados recuperados de um banco de dados.
+</p>
+<p>
+Como MySQL é um banco relacional, aprendemos aqui sobre o JOIN e como utilizá-lo para juntar tabelas e apresentar informações referentes ao mesmo elementoo presente em mais de uma tabela.
+</p>
+<p>
+Outro conceito visto ao longo desse bloco é o da criação de Procedures e Functions para leitura ou manipulação de informações armazenadas em algum banco de dados.
+</p>
+
+<h2 id="bloco22"> Bloco 22: Normalização e Modelagem de Banco de Dados </h2>
+<p>
+Bloco de conteúdo mais voltado para a teoria de criação de banco de dados mesmo. Aprendemos a utilizar ferramentas que nos ajudem a visualizar as relações entre tabelas de um banco de dados, que já nos possibilitem criar o Diagrama e nos devolvem já o código para a criação do banco com as relações definidas entre as tabelas.
+</p>
+<p>
+É abordada as questões referentes as formas normais de uma construção de um banco de dados, que visa lapidar a construção da relação entre tabelas, garantindo que os dados fiquem armazenados em tabelas que façam sentido e as relações entre as tabelas sejam adequadas.
+</p>
+
+<h2 id="bloco23"> Bloco 23: Introdução ao MongoDB </h2>
+<p>
+Introdução aos bancos NoSQL, mais especificamente ao MongoDB, tutorial de instalação, principais características, forma de uso, métodos de criação de dados, pesquisa com seus principais filtros e formas de deletar documentos do banco de dados.
+</p>
+
+
+<h2 id="bloco24"> Bloco 24: MongoDB: Updates Simples e Complexos </h2>
+<p>
+Bloco direcionado a manipulação de dados nos documentos do banco. Aprendemos desde os operadores mais básicos para alterações simples de valores no documento, até os operadores mais complexos.
+</p>
+<p>
+Também aprendemos operadores para adicionar ou remover algum valor dentro de algum documento.
+</p>
+
+<h2 id="bloco25"> Bloco 25: MongoDB: Aggregation Framework </h2>
+<p>
+Aggregation Framework é um método do MongoDB que permite fazer agregações nas pesquisas, garantindo que seja possível agrupar elementos de uma mesma tabela por alguma chave específica ou até mesmo criar uma pesquisa relacional, trazendo valores de tabelas que conversem entre si em alguma chave que apresente o mesmo valor.
+</p>
+
+<h2 id="bloco26"> Bloco 26: Introdução ao desenvolvimento Web com NodeJS </h2>
+<p>
+Primeiro contato com NodeJS, esse bloco nos apresenta em detalhes a fundamentação do seu fluxo de funcionamento, principalmente questões sobre callback, fluxo de execução, questões relacionadas a assincronicidade e a importância do surgimento de Promises para o fim do Callback Hell.
+</p>
+<p>
+Nesse bloco também somos apresentados ao Express, é um framework de aplicação mobile que proporciona um set robusto de métodos para desenvolvimento de aplicações. Permite trabalhar com os verbos HTTP, lidar com as requisições, comunicar-se com banco de dados e devolver as respostas necessárias para o cliente.
+</p>
+
+<h2 id="bloco27"> Bloco 27: NodeJS: Camada de Serviço e Arquitetura Rest e Restful </h2>
+<p>
+Seguindo os trabalos com NodeJS, mais especificamente com Express, nesse bloco aprendemos a importância da Arquitetura de Software, principalmente da MSC, onde trabalha-se com o conceito de models, services e controllers, garantindo que cada parcela da aplicação tenha suas responsabilidades e evitando que certas informações fujam do escopo que devem pertencer, também garantindo que não chegue informações desnecessárias em escopos que não precisem dessas informações.
 </p>
